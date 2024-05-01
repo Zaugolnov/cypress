@@ -2,8 +2,8 @@ describe('E2e (end-to-end) автотест для покемонов', function
 
     it('Проверка на позитивный кейс', function () {
         cy.visit('https://pokemonbattle.me/login'); //Зашли на сайт
-        cy.get(':nth-child(1) > .auth__input').type('zau-sasha@yandex.ru'); // ввели верный логин
-        cy.get('#password').type('12345678Q'); // ввели верный пароль
+        cy.get(':nth-child(1) > .auth__input').type('USER_LOGIN'); // ввели верный логин
+        cy.get('#password').type('USER_PASSWORD'); // ввели верный пароль
         cy.get('.auth__button').click(); // нажали "Войти"
         cy.get('.header__btns > [href="/shop"]').click(); // нажали "Магазин"
         cy.get('.available > button').first().click(); // нажали купить
